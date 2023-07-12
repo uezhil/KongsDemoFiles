@@ -4,7 +4,7 @@
        
         <script>
 
-            Method3();
+        Method2();
 
             function Method1() {
             //1.Direct
@@ -28,17 +28,27 @@
                 this.mname = mn;
                 this.mact = mactor;
                 this.mgen = genre;
+                //private
+                var mcollection = 76879699;
+                this.disp = function () {
+                    console.log("The Movie collection is " + mcollection);
+                }
             }
 
             var mov = new movieInfo("spiderverse","Miles","Scifi");
             var mov1 = new movieInfo("spiderverse into ","Miles","Scifi");
             var mov2 = new movieInfo("spiderverse across","Miles","Scifi");
 
+            //movieInfo.prototype.mrating = "4.5";
+            //console.log(movie2.mrating);
+            movieInfo.prototype.Mreview = function () {
+                console.log("Great Movie..")
+            }
 
+            alert(mov.mcollection);
 
-            console.log(mov.mname );
-            console.log(mov1.mact );
-            console.log(mov2.mgen );
+            var movnew = new movieInfo("spiderverse","Miles","Scifi");
+            movnew.disp();
         }
 
 
