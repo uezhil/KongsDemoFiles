@@ -1,0 +1,17 @@
+Shopping Cart I Steps
+1.Models - SHoppingCartItems
+-ShoppingCart -All methods
+2. Get Cart  -Httpcontext - session - Guid - getstring/setstring
+3.Dbcontext - SHoppingCartrItem
+4.Program.cs  - builder.Services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+            builder.Services.AddHttpContextAccessor();
+            builder.Services.AddSession();
+            
+5.ShoppingViewModel
+6.Controller - Shopping Cart - Addtocart - return Vm
+7.View - Calculate - qty * price/Gtotal
+8.Migration
+------ViewComponent - SHopping Cart---
+
+
+   

@@ -1,0 +1,31 @@
+--EF Steps--
+1. Models created 
+2. Controllers - Home/Paintings 
+3. Views - Partial views, Listviewmodel
+4.Packages - Sqlserver, tools - version check
+5.DbContext - ctor - base options
+6.Dbset - models -> tables - paintings/category 
+public DbSet<Painting> Paintings { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
+7.appsettings - "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=EkamArtDb;Trusted_Connection=True"
+8.Program.cs
+builder.Services.AddScoped<ICategoryRepo,CategoryDbRepo>();
+            builder.Services.AddScoped<IPaintingRepo, PaintingDbRepo>();
+            builder.Services.AddDbContext<PaintingDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            
+9. Migration - add-migration mig1
+10.update-database
+11. Seed the db - Dbcontext
+12.OnModelcreating
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //seeding the db
+            modelBuilder.Entity<Category>().HasData
+                (
+                new Category
+13. Verify/Db 
+14. Changes - migration
+15.remove-migration
