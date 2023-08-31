@@ -1,3 +1,4 @@
+https://learn.microsoft.com/en-us/training/modules/publish-azure-web-app-with-visual-studio/5-exercise-publish-an-asp.net-app-from-visual-studio
 https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/4-exercise-explore-learn-sandbox
 C# Assessment - https://forms.office.com/r/jpBnzXBHRX
 Fb - https://form.123formbuilder.com/2495116/online-feedback-form
